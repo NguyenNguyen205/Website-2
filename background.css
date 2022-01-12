@@ -1,0 +1,255 @@
+:root {
+    --text: white;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#background {
+    /* https://www.eggradients.com/category/black-and-blue-gradient (reference0*/
+     background-color: #130f40;
+    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    /* background: white; */
+
+}
+
+@keyframes bright_alter {
+    0% {
+        transform: scale(1);
+      }
+
+    50% {
+        transform: scale(1.75);
+           }
+    100% {
+            transform: scale(1);
+     }
+}
+
+header {
+    background: -webkit-linear-gradient(180deg, black, Cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* gradient text, may fix the color later */
+    color: white;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+
+}
+nav a {
+    box-shadow: 0 4px 8px 0 rgba(255,255,255,0.2), 0 6px 20px 0 rgba(255,255,255, 0.19);
+    background: black;
+    color: #FFD700;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    transition: background 0.3s;
+}
+nav a:hover {background: lightslategray;}
+
+h1 {
+    margin-left: 150px;
+    margin-top: 70px;
+    color: #FFD700;
+} /* could add line to top and bottom later if have time */
+#moon {
+    background: rgba(19, 15, 64, 0);
+    border: none;
+    color: white;
+    font-size: 50px;
+    position: sticky;
+    left: 1300px;
+    bottom: 300px;
+    cursor: pointer;
+
+}
+@keyframes sun {
+    from{transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+#sun {
+    background: rgba(19, 15, 64, 0);
+    border: none;
+    color: black;
+    font-size: 50px;
+    position: sticky;
+    left: 1300px;
+    bottom: 300px;
+    cursor: pointer;
+    animation: sun 20s linear infinite;
+    opacity: 0;
+}
+@keyframes rise_bg {
+    from {background:black;}
+    to {background:white;}
+}
+
+.sky_change {
+    animation: rise_bg 1s linear forwards;
+}
+
+.star {
+    background: rgba(24,45,6,0);
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    animation: bright_alter 3s linear 0s infinite;
+}
+
+#sea {
+    width: 100%;
+    height: 100px;
+    position:absolute;
+    left: 0px;
+    background: linear-gradient(180deg,#006994,#6FFFE9);
+}
+
+@keyframes intersection {
+    from{transform: translateX(20px);opacity:0;}
+    to{transform: translateX(0px);opacity:1;}
+}
+.container {
+filter: brightness(200%);
+padding: 10px;
+margin-bottom: 10px;
+/* From https://css.glass */
+background: rgba(110,106, 106, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+color:var(--text);
+width:50%;
+margin-top:50px;
+margin-left:10em;
+visibility: hidden;
+}
+.intersection {
+    visibility: visible;
+    animation:intersection 1s linear
+    }
+
+footer a {
+    text-decoration: none;
+    font-size: 50px;
+    color: black ;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+.before {float: left;margin-left: 10px;}
+.after {float: right;margin-right: 10px;}
+
+@keyframes rotation{
+    from{transform: rotateX(0deg);}
+    to{transform: rotateX(180deg);}
+}
+
+footer a:hover {
+    color: white;
+    animation: rotation 0.3s infinite;
+}
+
+
+@keyframes lines {
+    0% {transform:scaleX(0);}
+
+    100% {transform:scaleX(1);}
+}
+.line-appear{animation: lines 2s ease-out;}
+
+
+.box-container{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap: 3em;
+    background: rgba(0,0,0,0);
+    margin-bottom: 3em;
+}
+
+.boxes {
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+     display:flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    max-width:200px;
+    height: 200px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.text {
+    font-size: 20px;
+    text-align: center;
+
+     background: -webkit-linear-gradient(180deg, red, Aqua);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.boxes:hover {
+    background: Azure;
+    transform: translateY(-10px);
+}
+@keyframes appear {
+    0% {
+		height: 0px;
+	}
+	50% {
+		height: 100px;
+	}
+}
+#box-context1 {display: none;}
+#box-context2 {display: none;}
+#box-context3 {display: none;}
+#box-context4 {display: none;}
+#box-context5 {display: none;}
+#box-context6 {display: none;}
+#box-context7 {display: none;}
+#box-context8 {display: none;}
+#box-context9 {display: none;}
+
+.box-content {
+ /* From https://css.glass */
+
+    color: var(--text);;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+padding: 10px;
+margin-bottom: 20px;
+animation: appear 1s ease-out;
+}
+.cancel-window {
+    background:rgba(0,0,0,0);
+    position:absolute;
+    right:5px;top:10px;
+    color:var(--text);
+    border:none;
+    font-size: 20px;
+    cursor: pointer;
+}
