@@ -26,7 +26,7 @@ function set() {
        }
 
 const contains = document.querySelectorAll(".container");
-const lines = document.querySelectorAll("hr");
+
 
 const observer = new IntersectionObserver(
     entries => {
@@ -39,20 +39,8 @@ const observer = new IntersectionObserver(
         threshold: 0.4,
     }
 )
-const observer2 = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            entry.target.classList.toggle("line-appear", entry.isIntersecting)
-            if (entry.isIntersecting) observer.unobserve(entry.target)
-        })
-    }
-)
 contains.forEach(contain => {
     observer.observe(contain);
-})
-
-lines.forEach(line => {
-    observer2.observe(line);
 })
 
 function appear() {

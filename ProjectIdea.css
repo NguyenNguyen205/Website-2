@@ -265,3 +265,5 @@ animation: appear 1s ease-out;
     font-size: 20px;
     cursor: pointer;
 }
+
+table,th,td {border: 1px solid Cyan}
