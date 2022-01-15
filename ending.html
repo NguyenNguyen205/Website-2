@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="ending.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>The end</title>
+</head>
+<body id="background" style="overflow:hidden;">
+    <header class="text">Thank you</header>
+    <button id="moon" onclick="set()">☽</button>
+    <button id="sun" onclick="set()">&#9728</button>
+<div>
+    <div class="star">✦</div>
+    <div class="star" style="position:absolute;top: 300px;left: 1000px;animation: none;">✦</div>
+    <div class="star" style="position: absolute;top: 300px;right: 400px;animation: none;">✦</div>
+    <div class="star" style="position: absolute;top: 350px;left: 200px;">✦</div>
+    <div class="star" style="position: absolute;top: 100px;left: 1200px;animation: none;">✦</div>
+    <div class="star" style="position: absolute;top: 200px;left: 1000px;animation: none;">✦</div>
+    <div class="star" style="position: absolute;top: 250px;left: 900px;">✦</div>
+    <div class="star" style="position: absolute;top: 190px;left: 500px;animation: none;">✦</div>
+    <div class="star" style="position: absolute;top: 50px;left: 600px;">✦</div>
+    <div class="star" style="position: absolute;top: 2800px;left: 100px;animation: none;">✦</div>
+</div>
+<footer>
+        <div id="sea">
+            <div id="reflection-container" style="display:block;">
+                <div class="star" style="animation:none;position:absolute;right:1000px;top:20px;">✦</div>
+                <div class="star" style="animation:none;position:absolute;left:200px;top:50px;">✦</div>
+                <div class="star" style="animation:none;position:absolute;left:1000px;top:50px;">✦</div>
+                <div class="star" style="animation:none;position:absolute;top:30px;left:500px;">✦</div>
+                <div class="star" style="animation:none;position:absolute;top:50px;left:1200px;">✦</div>
+                <div class="star" style="animation:none;position:absolute;top:30px;left:500px;">✦</div>
+                <div class="star" style="animation:none;position:absolute;top:40px;left:700px;">✦</div>
+                <div class="star" style="animation:none;position:absolute;top:40px;left:800px;">✦</div>
+                <div class="star" style="animation:none;position:absolute;top:80px;left:600px;">✦</div>
+                <div class="star" style="animation:none;position:absolute;top:60px;left:400px;">✦</div>
+            </div>
+            <a class="before" href="home.html">Go back</a>
+            <div id="waves">
+                <div class="wave"></div>
+                <div class="wave" style="left:50px;"></div>
+                <div class="wave" style="left:150px;"></div>
+                <div class="wave" style="left:250px;"></div>
+                <div class="wave" style="left:350px;"></div>
+                <div class="wave" style="left:450px;"></div>
+                <div class="wave" style="left:550px;"></div>
+                <div class="wave" style="left:650px;"></div>
+                <div class="wave" style="left:750px;"></div>
+                <div class="wave" style="left:850px;"></div>
+                <div class="wave" style="left:950px;"></div>
+                <div class="wave" style="left:1050px;"></div>
+                <div class="wave" style="left:1150px;"></div>
+                <div class="wave" style="left:1250px;"></div>
+            </div>
+        </div>
+</footer>
+<script>
+    function set() {
+        var r = document.querySelector(':root');
+        var rs = getComputedStyle(r);
+        if (rs.getPropertyValue('--text') == 'white') {
+
+            var r = document.querySelector(':root');
+            r.style.setProperty('--text','black');
+            r.style.setProperty('--wave','white');
+            var sea = document.getElementById("reflection-container");
+            sea.style.display = "none";
+            var sun = document.getElementById("sun");
+            sun.style.opacity = "1";
+        }
+        else {
+            r = document.querySelector(':root');
+            r.style.setProperty('--text','white');
+            r.style.setProperty('--wave','#130f40');
+            sea = document.getElementById("reflection-container");
+            sea.style.display = "block";
+            sun = document.getElementById("sun");
+            sun.style.opacity = "0";
+        }
+       }
+</script>
+</body>
+</html>

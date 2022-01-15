@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>The IT World</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: black;
+    color:white;
+}
+#team-name{
+    cursor: grab;
+    font-size: 30px;
+}
+li{
+    list-style-type: none;
+}
+header a{
+    color: white;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+span a:hover{
+    text-decoration: underline;
+}
+.nav-links li{
+    font-size: 23px;
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a{
+    transition: all 0.3s ease 0.05s;
+}
+.nav-links li a:hover{
+    font-size: 27px;
+    /* color: #00A7E1; */
+    color: #cf995f;
+}
+#contact-us-btn{
+    font-size: large;
+    height: 40px;
+    background-color: black;
+    border: 1.5px solid white;
+    border-radius: 20px;
+    width: 100px;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease 0.08s;
+    font-weight: bold;
+}
+#contact-us-btn:hover{
+    border: none;
+    background-color: white;
+    color:black;
+    /* outline: 1.5px solid #cf995f; */
+    outline: 1.5px solid #fff;
+    outline-offset: 5px;
+}
+#about-div{
+    text-align: center;
+}
+#Nguyen-div, #Jang-div, #Khoi-div, #Quang-div{
+    width: 850px;
+    margin: auto;
+}
+footer{
+    padding-top: 20px;
+    text-align: center;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    min-height: 100px;
+    outline: 4px dashed black;
+    outline-offset: 5px;
+}
+footer span{
+    display: inline-block;
+    margin:10px 50px;
+}
+.footer-name{
+    color:#cf995f;
+    margin: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  top: 5px;
+  right: 330px;
+  color: yellow;
+  background: black
+  z-index: -100;
+}
+
+.container a{
+  display: none;
+}
+
+.container:hover a{
+  display:block;
+}
+
+    </style>
+    <script>
+        function showContacts(){
+            location.href = "#bottom"
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <span id="team-name">GROUP 14</span>
+        <nav >
+            <ul class="nav-links">
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="ProjectIdea.html">Contents</a></li>
+                <li><a href="#about-div">About</a></li>
+            </ul>
+        </nav>
+        <button id="contact-us-btn" onclick="showContacts()">Contact us</button>
+    </header>
+
+    <br>
+        <h1 style="text-align: center;" id="intro">--- INTRODUCTION ---</h1>
+        <br>
+        <h2 style="text-align: center;">Welcome</h2>
+        <br><br>
+        <p style="text-align: center; width: 850px; margin:auto; font-size: 19px;">
+            Hi, we are group 14. Our team includes <span><a href="#Nguyen-div">Nguyen Minh Nguyen</a></span>, <span><a href="#Jang-div">Jang Soohyuk</a></span> , <span><a href="#Khoi-div">Bui Minh Khoi</a></span> and <span><a href="#Quang-div">Nguyen Duc Quang</a></span>. We're just 4 joyful, enthusiastic, beginner musketeers embarking on their adventure in the field of Information Technology and trying their best to survive RMIT's assignments. To take a look at our report's contents, such as project idea, team profile... please click on "Contents" on the navigation bar. To know more about each individual's personal information, click on our names in this paragraph or click on " <span><a href="#about-div">About</a></span> ".
+            <p>
+            <br><br>
+        <p style="text-align: center; font-size: 18px;">Thank you.</p>
+        <p style="text-align: center; font-size:18px ;">Group 14.</p>
+<br><br><br><br><br><br><br><br>
+        <h1 style="text-align: center;">--- ABOUT ---</h1>
+        <br>
+        <div id="about-div">
+            <div id="Nguyen-div" >
+                <h3>Nguyen Minh Nguyen</h3>
+                <p>My name is Nguyen Minh Nguyen, and my student number is s3927220 and I live in Ho Chi Minh city. This is my first semester at RMIT university. Because of this, I’m really looking forward to be able to learn new things and have new experience at this school in the next 4 years. I love to learn new things related to computer, in both hardware and software, and it would be even better if I can apply what I learn to real-world situation. I also usually go to the Youtube media platform to watch videos and play badminton whenever possible. I’m currently a member of Group 14, and since I have had no IT experience before in working in these kinds of projects, so I’m both nervous and excited about the final result. However, I personally think that this is a great opportunity to learn new things and to be at first step towards my future careers.</p>
+            </div>
+            <br>
+            <div id="Jang-div">
+                <h3>Jang Soohyuk</h3>
+                <p>
+                    My name is Jang Soohyuk. I graduated international school in HCMC few months ago, and I think I have a special relationship with Vietnam as this is my second experience in Vietnam. Because of my father’s business, my family decided to move to Vietnam in 2013. I studied in international school in Year 4 until 2015. After I move back to Korea, I lived with a normal life for four years. In 2019, I came back to Vietnam as I wanted to experience a different life with other friends, so I decided to return to the same school which I studied in 2013. It was quite challenge to me when I return to Vietnam as I was not familiar with the education in the international school. To overcome myself, I tried my best to improve my English skills and spend lots of time to learn English vocabularies and grammar. In the result of 12 years of education, I was able to speak Korean, English, and a bit of Vietnamese. After I graduated high school, I decided to go on to undergraduate education that can learn about Information Technology in Vietnam which is RMIT. My hobby is to play badminton and look for news related to the IT equipment such as smart watch, TV, smartphones.
+                </p>
+            </div>
+            <br>
+            <div id="Khoi-div">
+                <h3>Bui Minh Khoi</h3>
+                <p>
+                    I was born and raised in Ho Chi Minh city. I was just a normal student for the 12 years of my study, my grade was never too low nor to high and the only language that I have learnt is English. I consider myself as an energetic person and I tend to put other people before myself in both work and life. Also, I love to make new friend along my journey and build new relationships. As for hobby, I’m really into video game as it has been a part of me seen my childhood.
+                </p>
+                <br>
+            <div id="Quang-div">
+                <h3>Nguyen Duc Quang</h3>
+                <p>
+                    Hi, I'm Quang and I am originally from Vietnam, and I have been living here with my mom, dad and older brother since I was born. I am currently fluent in 2 languages including English and Vietnamese, but I also know a little bit German.  I have just finished high school and I’m heading into my college years. I have been interested in programming and IT in general since I was in grade 9 but have not got the chance to really try it. So now is the time for me to try it out and experience new things, especially data science because that is what I want to work as in the future.  I like playing sports a lot in my free time, such as soccer, basketball, and ping pong. Also, a little fun fact about me is that I love eating Oreos with no cream.
+                </p>
+            </div>
+            </div>
+        </div>
+        <br><br>
+        <footer id="bottom">
+            <span><span class="footer-name">Nguyen:</span> s3927220@rmit.edu.vn</span>    <span><span class="footer-name">Quang:</span> s3927198@rmit.edu.vn</span>
+            <span><span class="footer-name">Jang:</span> s3928379@rmit.edu.vn</span> <span><span class="footer-name">Khoi:</span> s3929015@rmit.edu</span>
+          <span>Feel free to contact us using our student emails</span>
+        </footer>
+</body>
+</html>

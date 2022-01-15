@@ -1,0 +1,114 @@
+:root {
+    --text: white;
+    --wave: #130f40;
+}
+#background {background-color:var(--wave);}
+    /* https://www.eggradients.com/category/black-and-blue-gradient*/
+* {
+    box-sizing: border-box;
+}
+.text {
+    color: var(--text);
+    position: absolute;
+    top: 150px;
+    left: 34%;
+    text-align: center;
+    font-size: 100px;
+    display: flex;
+
+}
+
+@keyframes bright_alter {
+    0% {
+        transform: scale(1);
+      }
+
+    50% {
+        transform: scale(1.75);
+           }
+    100% {
+            transform: scale(1);
+     }
+}
+
+.star {
+    background: rgba(24,45,6,0);
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    animation: bright_alter 3s linear 0s infinite;
+}
+
+#sea {
+    width: 100%;
+    height: 100px;
+    position:absolute;
+    left: 0px;
+    bottom: 0px;
+    background: linear-gradient(180deg,#006994,#6FFFE9);
+}
+.before {
+    float: left;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    color: black ;
+    transition: color 0.5s;
+    cursor: pointer;
+    padding-top: 30px;
+}
+.before:hover {color: white}
+#waves {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90%;
+    }
+@keyframes waving {
+    from{transform:translate(0px,0px);}
+    50%{transform:translate(25px,25px);}
+    to{transform:translate(0px,0px);}
+}
+.wave {
+    width: 200px;
+    height: 100px;
+    border-radius: 50% ;
+    position: absolute;
+    top: -90px;
+    left: -50px;
+    background: var(--wave);
+    animation: waving 5s infinite;
+}
+#moon {
+    background: rgba(19, 15, 64, 0);
+    border: none;
+    color: white;
+    font-size: 50px;
+    position: sticky;
+    left: 1300px;
+    bottom: 300px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+@keyframes sun {
+    from{transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+#sun {
+    background: rgba(19, 15, 64, 0);
+    border: none;
+    color: black;
+    font-size: 50px;
+    position: sticky;
+    left: 1300px;
+    bottom: 300px;
+    cursor: pointer;
+    animation: sun 20s linear infinite;
+    opacity: 0;
+    border-radius: 50%;
+
+}
+
+
